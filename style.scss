@@ -1,0 +1,156 @@
+$Violet: hsl(257, 40%, 49%);
+
+body {
+  font-family: "Open Sans", sans-serif;
+  //font-family: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+*:focus {
+  outline: none;
+}
+.wrapper {
+  height: 100vh;
+  background-image: url(./images/bg-desktop.svg);
+  background-size: cover;
+  background-color: $Violet;
+}
+
+.container {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 151px;
+  padding: 30px 0;
+}
+
+.hero {
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+.hero-flex {
+  display: flex;
+  justify-content: space-between;
+
+  .hero-box {
+    width: 50%;
+  }
+
+  .left-img {
+    padding-right: 30px;
+    img {
+      width: 100%;
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .right-content {
+    color: #fff;
+    padding-left: 30px;
+    h1 {
+      width: 80%;
+      padding: 60px 0 15px 0;
+    }
+
+    p {
+      color: #ddd;
+      padding-bottom: 30px;
+    }
+
+    .hero-btn {
+      padding: 15px 60px;
+      color: $Violet;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      box-shadow: 1px 1px 12px rgba(rgb(43, 43, 43), 0.3);
+    }
+  }
+}
+
+.social {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  padding: 60px;
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline;
+    padding: 0 10px;
+  }
+}
+.icon-circle {
+  color: white;
+  border: 1px solid white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.fa {
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    height: auto;
+    background-image: url(./images/bg-mobile.svg);
+  }
+  .hero {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero-flex {
+    flex-direction: column;
+    margin: 0 auto;
+    .right-content {
+      padding-left: 0 !important;
+      h1 {
+        font-size: 24px;
+        padding: 30px 0;
+        margin: 0 auto;
+      }
+    }
+
+    .left-img {
+      padding-right: 0;
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+  .social {
+    display: block;
+    position: relative;
+    margin: 0;
+    text-align: center;
+    padding: 30px 0;
+    right: 0;
+  }
+
+  .hero-box {
+    width: 100% !important;
+    margin: 0;
+  }
+
+  .right-content h1 {
+    padding: 0 0 0;
+  }
+}
